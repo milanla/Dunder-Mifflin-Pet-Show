@@ -1,0 +1,13 @@
+<h1><%= @employee.full_name %></h1>
+<% if @employee.img_url != nil %>
+  <%= image_tag(@employee.img_url) %>
+<% end %>
+<ul>
+  <li>Alias: <%= @employee.alias %></li>
+  <li>Title: <%= @employee.title %></li>
+  <li>Office: <%= @employee.office %></li>
+  <li>Dog Name: <%= @employee.dog.name %></li>
+</ul>
+<p>
+<%= link_to "Edit", edit_employee_path %>
+</p>
